@@ -38,15 +38,25 @@ class Solution:
     def findStarElements(self):
         superStar = -1
         starElements = []
-        maxCurrent = -1
+        maxCurrent = -1e6
 
         for i in self.A[::-1]:
-            if i > maxCurrent:
+            if i == superStar:
+                superStar = -1            
+            
+            
+            if i == maxCurrent:
+                continue
+            
+            
+            if i  > maxCurrent:
                 starElements.append(i)
                 maxCurrent = i
                 superStar = i
-            if i == superStar:
-                superStar = -1
+                continue
+
+            
+            
         starElements.sort(reverse=True)
         return starElements, superStar
 
@@ -57,5 +67,5 @@ for _ in range(t):
     A = list(map(int, input().split()))
     S = Solution(n ,A)
     starElements, superStar  = S.findStarElements()
-    print(starElements)
+    print(' '.join(map(str, starElements)))
     print(superStar)
