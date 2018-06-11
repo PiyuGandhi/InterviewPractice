@@ -1,6 +1,6 @@
 ## Interview Practice
 
-These are some interview questions on Geeks For Geeks Practice and Interview Bit donee by me entirely on Python.
+These are some interview questions on Geeks For Geeks Practice and Interview Bit done by me entirely in Python.
 
 Each file contains the problem statement and the solution to it.
 
